@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="vxCR7UZKA6n61GMSvtdpRMhxPIm91afz5tcXBedhRtA" />     <meta name="descripe" content="بيع منتاجات يدويه , gogohandmade , gogo-handmade , بيع منتاجات مصنعه يدويا ">
+    <title>Handmade 💗</title>
+    <style>
+        body {
+            text-align: center;
+            margin-right: 20px;
+        }
+
+        .products-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            width: 300px;
+            margin: 20px;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+
+        .cart {
+            margin-top: 50px;
+        }
+
+        .cart-item {
+            margin-bottom: 20px;
+        }
+
+        .cart-item img {
+            width: 50px;
+            height: auto;
+            vertical-align: middle;
+        }
+
+        .cart-item .product-name {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .remove-btn {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            display: none;
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        .total-price {
+            margin-top: 20px;
+        }
+        .b {
+            position: absolute;
+            top: 10px; /* تعديل حسب الحاجة */
+            right: 20px; /* تعديل حسب الحاجة */
+            width: 100px;
+            height: 40px;
+            background-color: green;
+            color : white;
+            border-radius: 20%;
+        }
+        .product img {
+            width: 150px;
+            height: auto;
+        }
+        .product p{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Handmade 💗</h1>
+    
+    <button class="b" onclick="share()">share</button>
+
+    
+    <div class="products-container">
+        <div class="product" data-price="60">
+            <img class="img" src="المنتج الاول.jpg" alt="ملابس">
+          <h3>CROCHET AIRPOD CASE</h3>
+            
+            <p class="p">price: 60 </p>
+            <button class="buy-btn" data-product="CROCHET AIRPOD CASE" data-price="60">شراء</button>
+        </div>
+        <div class="product" data-price="80">
+            <img class="img" src="المنتج الثاني.jpg" alt="ملابس">
+            <h3>Mug warmer crochet</h3>
+            
+            <p>price : 80</p>
+            <button class="buy-btn" data-product="Mug warmer crochet" data-price="80">شراء</button>
+        </div>
+
+        <div class="product" data-price="130">
+            <img class="img" src="المنتج الثالث.jpg" alt="ملابس">
+            <h3>Crochet jewelry holder in a frame</h3>
+            
+            <p>price : 130</p>
+            <button class="buy-btn" data-product="Crochet jewelry holder in a frame" data-price="130">شراء</button>
+        </div>
+
+        <div class="product" data-price="150">
+            <img class="img" src="المنتج الرابع.jpg" alt="ملابس">
+            <h3>Crochet bag</h3>
+            
+            <p>price : 150</p>
+            <button class="buy-btn" data-product="Crochet bag" data-price="150">شراء</button>
+        </div>
+
+        <div class="product" data-price="150">
+            <img class="img" src="المنتج الخامس.jpg" alt="ملابس">
+            <h3>Crochet bag</h3>
+            
+            <p>price : 150</p>
+            <button class="buy-btn" data-product="Crochet bag" data-price="150">شراء</button>
+        </div>
+
+        <div class="product" data-price="120">
+            <img class="img" src="المنتج السادس.jpg" alt="ملابس">
+            <h3>Wintericecap</h3>
+            
+            <p>price : 120</p>
+            <button class="buy-btn" data-product="Winter icecap" data-price="120">شراء</button>
+        </div>
+
+        
+        <div class="product" data-price="250">
+            <img class="img" src="المنتج السابع.jpg" alt="ملابس">
+            
+            
+            <p>price : 250</p>
+            <button class="buy-btn" data-product="Winter icecap" data-price="250">شراء</button>
+        </div>
+
+        <div class="product" data-price="200">
+            <img class="img" src= "المنتج الثامن.jpg" alt="ملابس">
+            <h3>Crochet bag</h3>
+            
+            <p>price : 200</p>
+            <button class="buy-btn" data-product="Crochet bag" data-price="200">شراء</button>
+        </div>
+
+        <div class="product" data-price="450">
+            <img class="img" src= "المنتج التاسع.jpg" alt="ملابس">
+            <h3>Trendy Crochet Mesh Top</h3>
+            
+            <p>price : 450</p>
+            <button class="buy-btn" data-product="Trendy Crochet Mesh Top" data-price="450">شراء</button>
+        </div>
+
+        <div class="product" data-price="350">
+            <img class="img" src= "المنتج العاشر.jpg" alt="ملابس">
+            <h3>Crochet Mesh Top</h3>
+            
+            <p>price : 350</p>
+            <button class="buy-btn" data-product="Crochet Mesh Top" data-price="350">شراء</button>
+        </div>
+
+        <div class="product" data-price="500">
+            <img class="img" src= "المنتج الحادي عشر.jpg" alt="ملابس">
+            <h3>Crochet winter pullover</h3>
+            
+            <p>price : 500</p>
+            <button class="buy-btn" data-product="Crochet winter pullover" data-price="500">شراء</button>
+        </div>
+
+        <div class="product" data-price="250">
+            <img class="img" src= "المنتج الثاني عشر.jpg" alt="ملابس">
+            
+            
+            <p>price : 250</p>
+            <button class="buy-btn" data-product="1" data-price="250">شراء</button>
+        </div>
+
+        <div class="product" data-price="250">
+            <img class="img" src= "المنتج الثالث عشر.jpg" alt="ملابس">
+            
+            
+            <p>price : 250</p>
+            <button class="buy-btn" data-product="2" data-price="250">شراء</button>
+        </div>
+
+        <div class="product" data-price="250">
+            <img class="img" src= "المنتج الرابع عشر.jpg" alt="ملابس">
+            
+            
+            <p>price : 300</p>
+            <button class="buy-btn" data-product="3" data-price="300">شراء</button>
+        </div>
+        <!-- يمكنك إضافة المزيد من عناصر المنتجات هنا -->
+    </div>
+
+    <div class="cart">
+        <h2>سلة المشتريات</h2>
+        <div class="cart-items"></div>
+        <p class="total-price">price : 0</p>
+        <button class="submit-btn">send request</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let totalCartPrice = 0;
+
+            const buyButtons = document.querySelectorAll('.buy-btn');
+            const cartItemsContainer = document.querySelector('.cart-items');
+            const submitButton = document.querySelector('.submit-btn');
+            const totalPriceElement = document.querySelector('.total-price');
+
+            buyButtons.forEach(function(button) {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const productName = button.getAttribute('data-product');
+                    const productPrice = parseFloat(button.getAttribute('data-price'));
+                    const productImageSrc = button.parentNode.querySelector('img').getAttribute('src');
+                    addToCart(productName, productPrice, productImageSrc);
+                });
+            });
+
+            submitButton.addEventListener('click', function() {
+                const cartItems = document.querySelectorAll('.cart-item');
+                let orderList = '';
+                cartItems.forEach(function(item) {
+                    const productName = item.getAttribute('data-product');
+                    const quantity = parseInt(item.getAttribute('data-quantity'));
+                    orderList += productName + ' (الكمية: ' + quantity + ')\n';
+                });
+                sendOrder(orderList);
+            });
+
+            function addToCart(productName, productPrice, productImageSrc) {
+                const cartItem = document.querySelector(`.cart-item[data-product="${productName}"]`);
+                if (cartItem) {
+                    const quantityElement = cartItem.querySelector('.product-quantity');
+                    let quantity = parseInt(quantityElement.textContent);
+                    quantity++;
+                    quantityElement.textContent = quantity;
+                    cartItem.setAttribute('data-quantity', quantity);
+                } else {
+                    const cartItem = document.createElement('div');
+                    cartItem.classList.add('cart-item');
+                    cartItem.setAttribute('data-product', productName);
+                    cartItem.setAttribute('data-quantity', '1');
+                    cartItem.setAttribute('data-price', productPrice);
+                    cartItem.innerHTML = `
+                        <img src="${productImageSrc}" alt="${productName}">
+                        <span class="product-name">${productName}</span>
+                        <span class="product-price">${productPrice} </span>
+                        <span class="product-quantity">1</span>
+                        <button class="remove-btn" data-product="${productName}" data-price="${productPrice}">حذف</button>
+                    `;
+                    cartItemsContainer.appendChild(cartItem);
+                }
+                updateTotalPrice(productPrice);
+                checkCart();
+                const removeButtons = document.querySelectorAll('.remove-btn');
+                removeButtons.forEach(function(button) {
+                    button.addEventListener('click', function() {
+                        const priceToRemove = parseFloat(button.getAttribute('data-price'));
+                        const quantityElement = button.parentNode.querySelector('.product-quantity');
+                        let quantity = parseInt(quantityElement.textContent);
+                        if (quantity > 1) {
+                            quantity--;
+                            quantityElement.textContent = quantity;
+                        } else {
+                            button.parentNode.remove();
+                        }
+                        updateTotalPrice(-priceToRemove);
+                        checkCart();
+                    });
+                });
+            }
+
+            function updateTotalPrice(priceDifference) {
+                totalCartPrice += priceDifference;
+                if (totalCartPrice < 0) {
+                    totalCartPrice = 0;
+                }
+                totalPriceElement.textContent = "السعر الإجمالي: " + totalCartPrice.toFixed(2) ;
+            }
+
+            function checkCart() {
+                const cartItems = document.querySelectorAll('.cart-item');
+                if (cartItems.length > 0) {
+                    submitButton.style.display = 'block';
+                } else {
+                    submitButton.style.display = 'none';
+                }
+            }
+            
+                // إنشاء الرسالة للبريد الإلكتروني بتضمين معلومات الطلب والسعر الإجمالي
+                function sendOrder(orderList) {
+                    let totalPrice = 0; // إجمالي سعر الطلب
+                    let images = ''; // روابط الصور
+                
+                    // حساب إجمالي سعر الطلب وجمع روابط الصور بتحليل القائمة من المنتجات
+                    orderList.split('\n').forEach(function(item) {
+                        const regexPrice = /price : (\d+)/g;
+                        const regexImage = /<img src="([^"]+)"/g;
+                        const matchPrice = regexPrice.exec(item);
+                        const matchImage = regexImage.exec(item);
+                        if (matchPrice && matchImage) {
+                            const price = parseInt(matchPrice[1]);
+                            const imageSrc = matchImage[1];
+                            totalPrice += price;
+                            images += `<img src="${imageSrc}" alt="منتج">\n`;
+                        }
+                    });
+                
+                    // إنشاء الرسالة للبريد الإلكتروني بتضمين معلومات الطلب والسعر الإجمالي وروابط الصور
+                    const email = "goumanaazez52@gmail.com";
+                    const subject = "Send Request ";
+                    const body = "أود شراء المنتجات التالية:\n" + orderList + "\nالرجاء التواصل معي في أقرب وقت ممكن.";
+                    const mailtoLink = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+                    window.location.href = mailtoLink;
+                }
+          } )               
+
+        function share() {
+            const url = window.location.href;
+            const title = document.title;
+            const shareText = "visit Handmade 💗 ";
+            const shareMessage = `${shareText}\n${title}: ${url}`;
+
+            if (navigator.share) {
+                navigator.share({
+                    title: title,
+                    text: shareText,
+                    url: url
+                }).then(() => {
+                    console.log('تمت المشاركة بنجاح.');
+                }).catch((error) => {
+                    console.error('حدث خطأ أثناء المشاركة:', error);
+                });
+            } else {
+                console.log('متصفحك لا يدعم المشاركة.');
+                console.log('الرسالة المشتركة:', shareMessage);
+            }
+        }
+    </script>
+</body>
+</html>
